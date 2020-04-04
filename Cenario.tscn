@@ -1,0 +1,221 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://tile.tres" type="TileSet" id=1]
+[ext_resource path="res://barra_sacada.png" type="Texture" id=2]
+[ext_resource path="res://janela3.png" type="Texture" id=3]
+[ext_resource path="res://png/Cenário/janela_paleta_menos_cor_sem_stroke.png" type="Texture" id=4]
+[ext_resource path="res://janela2.png" type="Texture" id=5]
+[ext_resource path="res://sacada_completa.png" type="Texture" id=6]
+[ext_resource path="res://barra_sacada2.png" type="Texture" id=7]
+[ext_resource path="res://png/Cenário/coluna_paleta_menos_cor_sem_stroke.png" type="Texture" id=8]
+[ext_resource path="res://coluna_refletida.png" type="Texture" id=9]
+[ext_resource path="res://png/Cenário/porta_paleta_menos_cor_sem_stroke.png" type="Texture" id=10]
+[ext_resource path="res://adereço_paleta_menos_cor_sem_stroke.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 27.4141, 425.144 )
+
+[node name="Node" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -10.2858, 4180.4 )
+z_index = 2
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -4128664, 0, 0, -3866628, 0, 0, -3866627, 0, 0, -3866626, 0, 0, -3866625, 0, 0, -3932160, 0, 0, -3932159, 0, 0, -3932158, 0, 0, -3932157, 0, 0, -3932156, 0, 0, -3932155, 0, 0, -3932154, 0, 0, -3932153, 0, 0, -3932152, 0, 0, -3932151, 0, 0, -3932150, 0, 0, -3932149, 0, 0, -3932148, 0, 0, -3932147, 0, 0, -3932146, 0, 0, -3932145, 0, 0, -3932144, 0, 0, -3932143, 0, 0, -3932142, 0, 0, -3932133, 0, 0, -3932132, 0, 0, -3932131, 0, 0, -3932130, 0, 0, -3932129, 0, 0, -3932128, 0, 0, -3932127, 0, 0, -3932126, 0, 0, -3932125, 0, 0, -3932124, 0, 0, -3932123, 0, 0, -3932122, 0, 0, -3932121, 0, 0, -3932120, 0, 0, -3932119, 0, 0, -3932118, 0, 0, -3932117, 0, 0, -3932116, 0, 0, -3932115, 0, 0, -3932114, 0, 0, -3932113, 0, 0, -3932112, 0, 0, -3932111, 0, 0, -3932110, 0, 0, -3932109, 0, 0, -3932108, 0, 0, -3932107, 0, 0, -3932102, 0, 0, -3932097, 0, 0, -3932096, 0, 0, -3932095, 0, 0, -3932085, 0, 0, -3932084, 0, 0, -3932083, 0, 0, -3932081, 0, 0, -3932080, 0, 0, -3932079, 0, 0, -3932078, 0, 0, -3932077, 0, 0, -3932076, 0, 0, -3932075, 0, 0, -3932074, 0, 0, -3932073, 0, 0, -3932072, 0, 0, -3932071, 0, 0, -3932070, 0, 0, -3932069, 0, 0, -3932068, 0, 0, -3932067, 0, 0, -3932066, 0, 0, -3932065, 0, 0, -3932064, 0, 0, -3932063, 0, 0, -3932062, 0, 0, -3932061, 0, 0, -3932060, 0, 0, -3932059, 0, 0, -3932058, 0, 0, -3932057, 0, 0, -3932056, 0, 0, -3932055, 0, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+visible = false
+position = Vector2( -10.2858, 4180.4 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -4194277, 0, 0, -4194238, 0, 0, -4194237, 0, 0, -4194236, 0, 0, -4194235, 0, 0, -4194234, 0, 0, -4194233, 0, 0, -4194232, 0, 0, -4194231, 0, 0, -4194230, 0, 0, -4128749, 0, 0, -4128748, 0, 0, -4128747, 0, 0, -4128746, 0, 0, -4128745, 0, 0, -4128744, 0, 0, -4128743, 0, 0, -4128742, 0, 0 )
+
+[node name="barra_sacada" type="Sprite" parent="."]
+position = Vector2( 2903.89, -141.532 )
+scale = Vector2( 1.24581, 1.09847 )
+texture = ExtResource( 2 )
+
+[node name="barra_sacada2" type="Sprite" parent="."]
+position = Vector2( 175.615, -99.727 )
+scale = Vector2( 0.614834, 1.09847 )
+texture = ExtResource( 2 )
+
+[node name="janelas" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 2047.62, -199.853 )
+scale = Vector2( 1.1835, 1.17688 )
+
+[node name="janelaC" type="Sprite" parent="janelas"]
+position = Vector2( 590, 256.842 )
+scale = Vector2( 0.97163, 1.05776 )
+texture = ExtResource( 3 )
+
+[node name="janelaC3" type="Sprite" parent="janelas"]
+position = Vector2( 2788.19, 270.251 )
+scale = Vector2( 0.97163, 1.05776 )
+texture = ExtResource( 3 )
+
+[node name="janelaC4" type="Sprite" parent="janelas"]
+position = Vector2( 3755.74, 268.64 )
+scale = Vector2( 0.97163, 1.05776 )
+texture = ExtResource( 3 )
+
+[node name="janelaC2" type="Sprite" parent="janelas"]
+position = Vector2( 857.036, 256.158 )
+scale = Vector2( 0.97163, 1.05776 )
+texture = ExtResource( 3 )
+
+[node name="janelaA" type="Sprite" parent="janelas"]
+position = Vector2( -1191.37, 275.207 )
+scale = Vector2( 0.84495, 0.849704 )
+texture = ExtResource( 4 )
+
+[node name="janelaA2" type="Sprite" parent="janelas"]
+position = Vector2( 3540.59, 264.615 )
+scale = Vector2( 0.84495, 0.849704 )
+texture = ExtResource( 4 )
+
+[node name="janelaA3" type="Sprite" parent="janelas"]
+position = Vector2( 3055.13, 260.181 )
+scale = Vector2( 0.84495, 0.849704 )
+texture = ExtResource( 4 )
+
+[node name="janelaA1" type="Sprite" parent="janelas"]
+position = Vector2( -988.371, 276.695 )
+scale = Vector2( 0.84495, 0.849704 )
+texture = ExtResource( 4 )
+
+[node name="janelaB3" type="Sprite" parent="janelas"]
+position = Vector2( 147.347, 248.897 )
+texture = ExtResource( 5 )
+
+[node name="janelaB4" type="Sprite" parent="janelas"]
+position = Vector2( 1341.53, 256.985 )
+texture = ExtResource( 5 )
+
+[node name="janelaB5" type="Sprite" parent="janelas"]
+position = Vector2( 1560.85, 259.199 )
+texture = ExtResource( 5 )
+
+[node name="janelaB2" type="Sprite" parent="janelas"]
+position = Vector2( -71.1773, 243.76 )
+texture = ExtResource( 5 )
+
+[node name="sacada" type="Node2D" parent="."]
+position = Vector2( 117.634, 161.621 )
+
+[node name="sacada_completa" type="Sprite" parent="sacada"]
+position = Vector2( 1343, -155.241 )
+scale = Vector2( 0.201021, 0.219285 )
+texture = ExtResource( 6 )
+
+[node name="sacada_completa2" type="Sprite" parent="sacada"]
+position = Vector2( 4378.66, -178.538 )
+scale = Vector2( 0.220348, 0.219285 )
+texture = ExtResource( 6 )
+
+[node name="barra_sacada2" type="Sprite" parent="sacada"]
+position = Vector2( 3645, -294.728 )
+scale = Vector2( 1.14072, 1 )
+texture = ExtResource( 7 )
+
+[node name="barra_sacada5" type="Sprite" parent="sacada"]
+position = Vector2( 1990.57, -291.474 )
+scale = Vector2( 0.976872, 1 )
+texture = ExtResource( 7 )
+
+[node name="barra_sacada3" type="Sprite" parent="sacada"]
+position = Vector2( 6231.58, -299.511 )
+scale = Vector2( 1.05469, 1 )
+texture = ExtResource( 7 )
+
+[node name="barra_sacada4" type="Sprite" parent="sacada"]
+position = Vector2( 6241.14, -206.237 )
+scale = Vector2( 1.0891, 1 )
+texture = ExtResource( 7 )
+
+[node name="colunas" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 821.741, 131.064 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke" type="Sprite" parent="colunas"]
+position = Vector2( 352.975, -59.9748 )
+scale = Vector2( 0.854114, 0.655527 )
+texture = ExtResource( 8 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke4" type="Sprite" parent="colunas"]
+position = Vector2( -869.991, -55.3853 )
+scale = Vector2( 0.854114, 0.655527 )
+texture = ExtResource( 8 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke3" type="Sprite" parent="colunas"]
+position = Vector2( 4001.46, -58.7099 )
+scale = Vector2( 0.854114, 0.667333 )
+texture = ExtResource( 8 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke5" type="Sprite" parent="colunas"]
+position = Vector2( 5145.22, -59.7373 )
+scale = Vector2( 0.854114, 0.678011 )
+texture = ExtResource( 8 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke2" type="Sprite" parent="colunas"]
+position = Vector2( 2529.99, -62.3664 )
+scale = Vector2( 0.854114, 0.655527 )
+texture = ExtResource( 8 )
+
+[node name="coluna_refletida" type="Sprite" parent="colunas"]
+position = Vector2( 938.826, -62.9219 )
+scale = Vector2( 0.184207, 0.159108 )
+texture = ExtResource( 9 )
+
+[node name="coluna_refletida4" type="Sprite" parent="colunas"]
+position = Vector2( -425.446, -53.1135 )
+scale = Vector2( 0.184207, 0.159108 )
+texture = ExtResource( 9 )
+
+[node name="coluna_refletida3" type="Sprite" parent="colunas"]
+position = Vector2( 3358.25, -56.2557 )
+scale = Vector2( 0.192047, 0.15648 )
+texture = ExtResource( 9 )
+
+[node name="coluna_refletida5" type="Sprite" parent="colunas"]
+position = Vector2( 4259.31, -65.8873 )
+scale = Vector2( 0.184207, 0.161634 )
+texture = ExtResource( 9 )
+
+[node name="coluna_refletida2" type="Sprite" parent="colunas"]
+position = Vector2( 1638.66, -64.7725 )
+scale = Vector2( 0.184207, 0.159108 )
+texture = ExtResource( 9 )
+
+[node name="chão" type="Node2D" parent="."]
+position = Vector2( 3725.45, 372.811 )
+scale = Vector2( 12.248, 2.81 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 6735.14, 94.892 )
+scale = Vector2( 0.854121, 0.624303 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource( 2 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke2" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 0, -32.9236 )
+scale = Vector2( 1, 1.07981 )
+texture = ExtResource( 8 )
+
+[node name="porta" type="Node2D" parent="."]
+position = Vector2( 17.7042, -407.196 )
+
+[node name="porta_paleta_menos_cor_sem_stroke" type="Sprite" parent="."]
+position = Vector2( 160.555, 168.87 )
+texture = ExtResource( 10 )
+
+[node name="adereço_paleta_menos_cor_sem_stroke" type="Sprite" parent="."]
+position = Vector2( 5523.88, -82.834 )
+scale = Vector2( 1.23014, 1.25626 )
+texture = ExtResource( 11 )

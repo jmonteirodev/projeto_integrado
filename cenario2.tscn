@@ -1,0 +1,174 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://tile.tres" type="TileSet" id=1]
+[ext_resource path="res://barra_sacada.png" type="Texture" id=2]
+[ext_resource path="res://janela3.png" type="Texture" id=3]
+[ext_resource path="res://png/Cenário/janela_paleta_menos_cor_sem_stroke.png" type="Texture" id=4]
+[ext_resource path="res://janela2.png" type="Texture" id=5]
+[ext_resource path="res://sacada_completa.png" type="Texture" id=6]
+[ext_resource path="res://barra_sacada2.png" type="Texture" id=7]
+[ext_resource path="res://png/Cenário/coluna_paleta_menos_cor_sem_stroke.png" type="Texture" id=8]
+[ext_resource path="res://coluna_refletida.png" type="Texture" id=9]
+[ext_resource path="res://png/Cenário/porta_paleta_menos_cor_sem_stroke.png" type="Texture" id=10]
+[ext_resource path="res://adereço_paleta_menos_cor_sem_stroke.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 27.4141, 425.144 )
+
+[node name="Node2D" type="Node2D"]
+editor/display_folded = true
+position = Vector2( 3334.03, 475.894 )
+scale = Vector2( 0.854114, 0.655527 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -3936.26, 6272.37 )
+scale = Vector2( 1.1708, 1.52549 )
+z_index = 2
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -4128664, 0, 0, -3932160, 0, 0, -3932159, 0, 0, -3932158, 0, 0, -3932157, 0, 0, -3932156, 0, 0, -3932155, 0, 0, -3932154, 0, 0, -3932153, 0, 0, -3932152, 0, 0, -3932151, 0, 0, -3932150, 0, 0, -3932149, 0, 0, -3932148, 0, 0, -3932147, 0, 0, -3932146, 0, 0, -3932145, 0, 0, -3932144, 0, 0, -3932143, 0, 0, -3932142, 0, 0, -3932133, 0, 0, -3932132, 0, 0, -3932131, 0, 0, -3932130, 0, 0, -3932129, 0, 0, -3932127, 0, 0, -3932126, 0, 0, -3932125, 0, 0, -3932124, 0, 0, -3932123, 0, 0, -3932122, 0, 0, -3932118, 0, 0, -3932117, 0, 0, -3932116, 0, 0, -3932113, 0, 0, -3932112, 0, 0, -3932111, 0, 0, -3932108, 0, 0, -3932107, 0, 0, -3932106, 0, 0, -3932105, 0, 0, -3932100, 0, 0, -3932099, 0, 0, -3932097, 0, 0, -3932096, 0, 0, -3932095, 0, 0, -3932091, 0, 0, -3932090, 0, 0, -3932085, 0, 0, -3932084, 0, 0, -3932083, 0, 0, -3932081, 0, 0, -3932080, 0, 0, -3932079, 0, 0, -3932078, 0, 0, -3932077, 0, 0, -3932076, 0, 0, -3932075, 0, 0, -3932074, 0, 0, -3932073, 0, 0, -3932072, 0, 0, -3932071, 0, 0, -3932070, 0, 0, -3932069, 0, 0, -3932068, 0, 0, -3932067, 0, 0, -3932066, 0, 0, -3932065, 0, 0, -3932064, 0, 0, -3932063, 0, 0, -3932062, 0, 0, -3932061, 0, 0, -3932060, 0, 0, -3932059, 0, 0, -3932058, 0, 0, -3932057, 0, 0, -3932056, 0, 0, -3932055, 0, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+visible = false
+position = Vector2( -3936.26, 6272.37 )
+scale = Vector2( 1.1708, 1.52549 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -4194285, 0, 0, -4194284, 0, 0, -4194283, 0, 0, -4194282, 0, 0, -4194281, 0, 0, -4194280, 0, 0, -4194279, 0, 0, -4194278, 0, 0, -4194277, 0, 0, -4128664, 0, 0, -3932160, 0, 0, -3932159, 0, 0, -3932158, 0, 0, -3932157, 0, 0, -3932156, 0, 0, -3932155, 0, 0, -3932154, 0, 0, -3932153, 0, 0, -3932152, 0, 0, -3932151, 0, 0, -3932150, 0, 0, -3932149, 0, 0, -3932148, 0, 0, -3932147, 0, 0, -3932146, 0, 0, -3932145, 0, 0, -3932144, 0, 0, -3932143, 0, 0, -3932142, 0, 0, -3932133, 0, 0, -3932132, 0, 0, -3932131, 0, 0, -3932130, 0, 0, -3932129, 0, 0, -3932127, 0, 0, -3932126, 0, 0, -3932125, 0, 0, -3932124, 0, 0, -3932123, 0, 0, -3932122, 0, 0, -3932118, 0, 0, -3932117, 0, 0, -3932116, 0, 0, -3932113, 0, 0, -3932112, 0, 0, -3932111, 0, 0, -3932108, 0, 0, -3932107, 0, 0, -3932106, 0, 0, -3932105, 0, 0, -3932100, 0, 0, -3932099, 0, 0, -3932097, 0, 0, -3932096, 0, 0, -3932095, 0, 0, -3932091, 0, 0, -3932090, 0, 0, -3932085, 0, 0, -3932084, 0, 0, -3932083, 0, 0, -3932081, 0, 0, -3932080, 0, 0, -3932079, 0, 0, -3932078, 0, 0, -3932077, 0, 0, -3932076, 0, 0, -3932075, 0, 0, -3932074, 0, 0, -3932073, 0, 0, -3932072, 0, 0, -3932071, 0, 0, -3932070, 0, 0, -3932069, 0, 0, -3932068, 0, 0, -3932067, 0, 0, -3932066, 0, 0, -3932065, 0, 0, -3932064, 0, 0, -3932063, 0, 0, -3932062, 0, 0, -3932061, 0, 0, -3932060, 0, 0, -3932059, 0, 0, -3932058, 0, 0, -3932057, 0, 0, -3932056, 0, 0, -3932055, 0, 0 )
+
+[node name="barra_sacada" type="Sprite" parent="."]
+position = Vector2( -1425.22, -335.594 )
+scale = Vector2( 1.24423, 1.67571 )
+texture = ExtResource( 2 )
+
+[node name="janelas" type="Node2D" parent="."]
+position = Vector2( -1526.85, -409.671 )
+scale = Vector2( 1.38565, 1.79532 )
+
+[node name="janelaC" type="Sprite" parent="."]
+position = Vector2( -705.513, 135.817 )
+scale = Vector2( 1.34634, 1.89902 )
+texture = ExtResource( 3 )
+
+[node name="janelaC3" type="Sprite" parent="."]
+position = Vector2( 1936.64, 88.3501 )
+scale = Vector2( 1.34634, 1.89902 )
+texture = ExtResource( 3 )
+
+[node name="janelaC2" type="Sprite" parent="."]
+position = Vector2( -343.114, 134.589 )
+scale = Vector2( 1.34634, 1.89902 )
+texture = ExtResource( 3 )
+
+[node name="janelaA" type="Sprite" parent="."]
+position = Vector2( -3280.14, 143.168 )
+scale = Vector2( 1.1708, 1.52549 )
+texture = ExtResource( 4 )
+
+[node name="janelaA2" type="Sprite" parent="."]
+position = Vector2( 2240.5, 99.0395 )
+scale = Vector2( 1.1708, 1.52549 )
+texture = ExtResource( 4 )
+
+[node name="janelaA1" type="Sprite" parent="."]
+position = Vector2( -2956.94, 135.65 )
+scale = Vector2( 1.1708, 1.52549 )
+texture = ExtResource( 4 )
+
+[node name="janelaB" type="Sprite" parent="."]
+position = Vector2( 2976.53, -522.173 )
+scale = Vector2( 1.38565, 1.79532 )
+texture = ExtResource( 5 )
+
+[node name="janelaB3" type="Sprite" parent="."]
+position = Vector2( -1322.68, 116.591 )
+scale = Vector2( 1.38565, 1.79532 )
+texture = ExtResource( 5 )
+
+[node name="janelaB4" type="Sprite" parent="."]
+position = Vector2( 332.033, 51.6987 )
+scale = Vector2( 1.38565, 1.79532 )
+texture = ExtResource( 5 )
+
+[node name="janelaB2" type="Sprite" parent="."]
+position = Vector2( -1617.86, 122.257 )
+scale = Vector2( 1.38565, 1.79532 )
+texture = ExtResource( 5 )
+
+[node name="sacada" type="Node2D" parent="."]
+position = Vector2( -3786.49, 141.754 )
+scale = Vector2( 1.1708, 1.52549 )
+
+[node name="sacada_completa" type="Sprite" parent="."]
+position = Vector2( -2214.1, -146.932 )
+scale = Vector2( 0.235356, 0.334517 )
+texture = ExtResource( 6 )
+
+[node name="sacada_completa2" type="Sprite" parent="."]
+position = Vector2( 1329.79, -130.604 )
+scale = Vector2( 0.251047, 0.334517 )
+texture = ExtResource( 6 )
+
+[node name="barra_sacada2" type="Sprite" parent="."]
+position = Vector2( 481.086, -307.851 )
+scale = Vector2( 1.33556, 1.52549 )
+texture = ExtResource( 7 )
+
+[node name="colunas" type="Node2D" parent="."]
+position = Vector2( -2962.12, 95.1393 )
+scale = Vector2( 1.1708, 1.52549 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke" type="Sprite" parent="."]
+position = Vector2( -2545.35, 3.64835 )
+texture = ExtResource( 8 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke3" type="Sprite" parent="."]
+position = Vector2( 1713.44, -1.85118 )
+texture = ExtResource( 8 )
+
+[node name="coluna_paleta_menos_cor_sem_stroke2" type="Sprite" parent="."]
+position = Vector2( 0, -1.52588e-005 )
+texture = ExtResource( 8 )
+
+[node name="coluna_refletida" type="Sprite" parent="."]
+position = Vector2( -1858.26, -0.847427 )
+scale = Vector2( 0.21567, 0.242718 )
+texture = ExtResource( 9 )
+
+[node name="coluna_refletida3" type="Sprite" parent="."]
+position = Vector2( 967.447, 7.83598 )
+scale = Vector2( 0.21567, 0.230927 )
+texture = ExtResource( 9 )
+
+[node name="coluna_refletida2" type="Sprite" parent="."]
+position = Vector2( -1043.57, -3.67049 )
+scale = Vector2( 0.21567, 0.242718 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 3963.1, 10.1451 )
+scale = Vector2( 1.00001, 0.952368 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="coluna_paleta_menos_cor_sem_stroke2" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="porta" type="Node2D" parent="."]
+position = Vector2( -3903.49, -725.971 )
+scale = Vector2( 1.1708, 1.52549 )
+
+[node name="porta_paleta_menos_cor_sem_stroke" type="Sprite" parent="."]
+position = Vector2( -3786.49, 141.754 )
+scale = Vector2( 1.1708, 1.52549 )
+texture = ExtResource( 10 )
+
+[node name="adereço_paleta_menos_cor_sem_stroke" type="Sprite" parent="."]
+position = Vector2( -523.135, -233.044 )
+scale = Vector2( 1.44025, 1.91641 )
+texture = ExtResource( 11 )

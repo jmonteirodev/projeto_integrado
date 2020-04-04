@@ -1,0 +1,97 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Personagem.gd" type="Script" id=1]
+[ext_resource path="res://run1.png" type="Texture" id=2]
+[ext_resource path="res://run2.png" type="Texture" id=3]
+[ext_resource path="res://run3.png" type="Texture" id=4]
+[ext_resource path="res://run4.png" type="Texture" id=5]
+[ext_resource path="res://run5.png" type="Texture" id=6]
+[ext_resource path="res://run6.png" type="Texture" id=7]
+[ext_resource path="res://run7.png" type="Texture" id=8]
+[ext_resource path="res://run8.png" type="Texture" id=9]
+[ext_resource path="res://jump.png" type="Texture" id=10]
+[ext_resource path="res://atack2.png" type="Texture" id=11]
+[ext_resource path="res://stand.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Andar",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Morte",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Poder",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Pulo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Parada",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 22.3123, 79.9885 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 0.168574, 6.70874 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 54.3018, 134.216 )
+
+[node name="Personagem" type="KinematicBody2D"]
+position = Vector2( -0.180786, -5.09821 )
+collision_layer = 3
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -12.0227, 5.37538 )
+scale = Vector2( 0.473337, 0.473337 )
+frames = SubResource( 1 )
+animation = "Pulo"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.30232, 0.980291 )
+scale = Vector2( 0.89092, 1.07368 )
+shape = SubResource( 2 )
+
+[node name="dano" type="Area2D" parent="."]
+position = Vector2( 1.0672, 3.0205 )
+scale = Vector2( 91.3082, 326.866 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="shape" type="CollisionShape2D" parent="dano"]
+position = Vector2( -0.00235868, 0.122082 )
+scale = Vector2( 0.340347, 0.0206824 )
+shape = SubResource( 3 )
+
+[node name="pegarItem" type="Area2D" parent="."]
+visible = false
+position = Vector2( 1.0836, 1.73373 )
+scale = Vector2( 0.719998, 0.720002 )
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pegarItem"]
+shape = SubResource( 4 )
+[connection signal="area_entered" from="dano" to="." method="_on_dano_area_entered"]
+[connection signal="body_entered" from="dano" to="." method="_on_dano_body_entered"]
+[connection signal="body_entered" from="pegarItem" to="." method="_on_pegarItem_body_entered"]

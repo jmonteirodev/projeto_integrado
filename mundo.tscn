@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7426.33, 59.5917 )
+
+[node name="Cenário" type="Node"]
+
+[node name="Morte" type="StaticBody2D" parent="."]
+position = Vector2( 981.658, 1002.34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Morte"]
+position = Vector2( -10.5857, -520.632 )
+shape = SubResource( 1 )

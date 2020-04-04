@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://item.gd" type="Script" id=1]
+[ext_resource path="res://item/coracao0001.png" type="Texture" id=2]
+[ext_resource path="res://item/coracao0002.png" type="Texture" id=3]
+[ext_resource path="res://item/coracao0003.png" type="Texture" id=4]
+[ext_resource path="res://item/coracao0004.png" type="Texture" id=5]
+[ext_resource path="res://item/coracao0005.png" type="Texture" id=6]
+[ext_resource path="res://png/Itens/item.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 4.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.9596, 14.5348 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19.9587, 19.2478 )
+
+[node name="Item" type="Node2D"]
+position = Vector2( -0.449463, -0.798279 )
+
+[node name="Item" type="StaticBody2D" parent="."]
+position = Vector2( 0.297745, -0.108044 )
+collision_layer = 2
+collision_mask = 8
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Item"]
+position = Vector2( 0.157685, 0.25526 )
+scale = Vector2( 0.392556, 0.392556 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="Sprite" type="Sprite" parent="Item"]
+visible = false
+scale = Vector2( 0.0539137, 0.049888 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item"]
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Item"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item/Area2D"]
+shape = SubResource( 3 )
+[connection signal="area_entered" from="Item/Area2D" to="Item" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Item/Area2D" to="Item" method="_on_Area2D_body_entered"]

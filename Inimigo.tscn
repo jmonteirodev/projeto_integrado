@@ -1,0 +1,134 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://InimigoD.gd" type="Script" id=1]
+[ext_resource path="res://inimigo/Morte0001.png" type="Texture" id=2]
+[ext_resource path="res://inimigo/Morte0002.png" type="Texture" id=3]
+[ext_resource path="res://inimigo/Morte0003.png" type="Texture" id=4]
+[ext_resource path="res://inimigo/Morte0004.png" type="Texture" id=5]
+[ext_resource path="res://inimigo/Morte0005.png" type="Texture" id=6]
+[ext_resource path="res://inimigo/Morte0006.png" type="Texture" id=7]
+[ext_resource path="res://inimigo/Morte0007.png" type="Texture" id=8]
+[ext_resource path="res://inimigo/Morte0008.png" type="Texture" id=9]
+[ext_resource path="res://inimigo/Morte0009.png" type="Texture" id=10]
+[ext_resource path="res://inimigo/Morte0010.png" type="Texture" id=11]
+[ext_resource path="res://inimigo/Morte0011.png" type="Texture" id=12]
+[ext_resource path="res://inimigo/Morte0012.png" type="Texture" id=13]
+[ext_resource path="res://inimigo/Morte0013.png" type="Texture" id=14]
+[ext_resource path="res://inimigo/Morte0014.png" type="Texture" id=15]
+[ext_resource path="res://inimigo/Morte0015.png" type="Texture" id=16]
+[ext_resource path="res://inimigo/Morte0016.png" type="Texture" id=17]
+[ext_resource path="res://inimigo/andar20001.png" type="Texture" id=18]
+[ext_resource path="res://inimigo/andar20002.png" type="Texture" id=19]
+[ext_resource path="res://inimigo/andar20003.png" type="Texture" id=20]
+[ext_resource path="res://inimigo/andar20004.png" type="Texture" id=21]
+[ext_resource path="res://inimigo/andar20005.png" type="Texture" id=22]
+[ext_resource path="res://inimigo/andar20006.png" type="Texture" id=23]
+[ext_resource path="res://inimigo/andar20007.png" type="Texture" id=24]
+[ext_resource path="res://inimigo/andar20008.png" type="Texture" id=25]
+[ext_resource path="res://inimigo/andar20009.png" type="Texture" id=26]
+[ext_resource path="res://inimigo/andar20010.png" type="Texture" id=27]
+[ext_resource path="res://inimigo/andar20011.png" type="Texture" id=28]
+[ext_resource path="res://inimigo/andar20012.png" type="Texture" id=29]
+[ext_resource path="res://inimigo/andar20013.png" type="Texture" id=30]
+[ext_resource path="res://inimigo/andar20014.png" type="Texture" id=31]
+[ext_resource path="res://inimigo/andar20015.png" type="Texture" id=32]
+[ext_resource path="res://inimigo/andar20016.png" type="Texture" id=33]
+[ext_resource path="res://inimigo/andar20017.png" type="Texture" id=34]
+[ext_resource path="res://inimigo/andar20018.png" type="Texture" id=35]
+[ext_resource path="res://inimigo/andar20019.png" type="Texture" id=36]
+[ext_resource path="res://inimigo/atacar0001.png" type="Texture" id=37]
+[ext_resource path="res://inimigo/atacar0002.png" type="Texture" id=38]
+[ext_resource path="res://inimigo/atacar0003.png" type="Texture" id=39]
+[ext_resource path="res://inimigo/atacar0004.png" type="Texture" id=40]
+[ext_resource path="res://inimigo/atacar0005.png" type="Texture" id=41]
+[ext_resource path="res://inimigo/atacar0006.png" type="Texture" id=42]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "Morte",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "Andar",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "Ataque",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Parado",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13.1025, 25.3971 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1.95302, 5.88218 )
+
+[sub_resource type="CircleShape2D" id=4]
+
+[node name="Inimigo" type="KinematicBody2D"]
+position = Vector2( -0.765839, -0.382919 )
+z_index = 3
+collision_layer = 5
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 44.3702, 11.2641 )
+scale = Vector2( 0.271438, 0.271438 )
+frames = SubResource( 1 )
+animation = "Ataque"
+frame = 2
+playing = true
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -18.3398, 10.7342 )
+scale = Vector2( 3, 4.5 )
+shape = SubResource( 2 )
+
+[node name="Frente" type="RayCast2D" parent="."]
+position = Vector2( -0.51083, 12.063 )
+rotation = -1.5708
+enabled = true
+cast_to = Vector2( 0, 130 )
+
+[node name="Baixo" type="RayCast2D" parent="."]
+position = Vector2( 76.5956, -16.7294 )
+enabled = true
+cast_to = Vector2( 0, 170 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 77.6143, 31.4656 )
+
+[node name="vida" type="TextEdit" parent="."]
+margin_left = -12.2237
+margin_top = -184.569
+margin_right = 27.7763
+margin_bottom = -144.569
+
+[node name="areaDano" type="Area2D" parent="."]
+
+[node name="dano" type="CollisionShape2D" parent="areaDano"]
+position = Vector2( -17.8279, 2.15877 )
+scale = Vector2( 20, 20 )
+shape = SubResource( 3 )
+
+[node name="visaoArea" type="Area2D" parent="."]
+visible = false
+
+[node name="radar" type="CollisionShape2D" parent="visaoArea"]
+scale = Vector2( 20, 20 )
+shape = SubResource( 4 )
+[connection signal="area_entered" from="areaDano" to="." method="_on_visaoArea_area_entered"]
+[connection signal="area_exited" from="areaDano" to="." method="_on_visaoArea_area_exited"]
+[connection signal="area_entered" from="visaoArea" to="." method="_on_visaoArea_area_entered"]
+[connection signal="area_exited" from="visaoArea" to="." method="_on_visaoArea_area_exited"]

@@ -1,0 +1,182 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://hud.gd" type="Script" id=1]
+[ext_resource path="res://png/hud/Hud básica.png" type="Texture" id=2]
+[ext_resource path="res://png/hud/coração.png" type="Texture" id=3]
+[ext_resource path="res://png/hud/0.png" type="Texture" id=4]
+[ext_resource path="res://png/hud/1.png" type="Texture" id=5]
+[ext_resource path="res://png/hud/2.png" type="Texture" id=6]
+[ext_resource path="res://png/hud/3.png" type="Texture" id=7]
+[ext_resource path="res://png/hud/barra.png" type="Texture" id=8]
+[ext_resource path="res://png/hud/vidas-1.png" type="Texture" id=9]
+[ext_resource path="res://png/hud/vidas-2.png" type="Texture" id=10]
+[ext_resource path="res://png/hud/vidas-3.png" type="Texture" id=11]
+[ext_resource path="res://png/hud/vidas-4.png" type="Texture" id=12]
+[ext_resource path="res://png/hud/vidas-5.png" type="Texture" id=13]
+[ext_resource path="res://png/hud/vidas-6.png" type="Texture" id=14]
+[ext_resource path="res://png/hud/vidas-7.png" type="Texture" id=15]
+[ext_resource path="res://png/hud/poder true.png" type="Texture" id=16]
+[ext_resource path="res://png/hud/poder.png" type="Texture" id=17]
+[ext_resource path="res://Derrota.png" type="Texture" id=18]
+[ext_resource path="res://Vitoria.png" type="Texture" id=19]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="hud" type="Node2D" parent="."]
+position = Vector2( -374.943, -182.048 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="labelVidas" type="TextEdit" parent="hud"]
+visible = false
+margin_left = 200.612
+margin_top = 200.612
+margin_right = 304.612
+margin_bottom = 243.612
+text = "Vidas:"
+readonly = true
+
+[node name="vidas" type="TextEdit" parent="hud"]
+visible = false
+margin_left = 311.0
+margin_top = 202.503
+margin_right = 351.0
+margin_bottom = 242.503
+readonly = true
+
+[node name="Sprite" type="Sprite" parent="hud"]
+position = Vector2( 1060.92, 269.558 )
+scale = Vector2( 0.305722, 0.305722 )
+texture = ExtResource( 2 )
+
+[node name="coração" type="Sprite" parent="hud/Sprite"]
+position = Vector2( 388.503, 59.2005 )
+texture = ExtResource( 3 )
+
+[node name="0" type="Sprite" parent="hud/Sprite/coração"]
+visible = false
+position = Vector2( 274.914, -13.0475 )
+scale = Vector2( 2.44506, 2.44506 )
+texture = ExtResource( 4 )
+
+[node name="1" type="Sprite" parent="hud/Sprite/coração"]
+visible = false
+position = Vector2( 272.179, -8.50562 )
+texture = ExtResource( 5 )
+
+[node name="2" type="Sprite" parent="hud/Sprite/coração"]
+visible = false
+position = Vector2( 272.179, -8.50562 )
+texture = ExtResource( 6 )
+
+[node name="3" type="Sprite" parent="hud/Sprite/coração"]
+position = Vector2( 272.179, -8.50562 )
+texture = ExtResource( 7 )
+
+[node name="vidas" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -746.914, 72.1506 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 8 )
+
+[node name="vidas - 1" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -827.055, 71.4878 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 9 )
+
+[node name="vidas - 2" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -927.521, 70.1621 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 10 )
+
+[node name="vidas - 3" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -1001.15, 68.1736 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 11 )
+
+[node name="vidas - 4" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -1099.62, 60.8824 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 12 )
+
+[node name="vidas - 5" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -1186.67, 71.4878 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 13 )
+
+[node name="vidas - 6" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -1271.34, 72.1506 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 14 )
+
+[node name="vidas - 7" type="Sprite" parent="hud/Sprite"]
+position = Vector2( -1356.53, 72.5335 )
+scale = Vector2( 0.940705, 0.940705 )
+texture = ExtResource( 15 )
+
+[node name="Poder true" type="Sprite" parent="hud/Sprite"]
+position = Vector2( 1153.46, 43.52 )
+scale = Vector2( 0.912601, 0.919612 )
+texture = ExtResource( 16 )
+
+[node name="Poder false" type="Sprite" parent="hud/Sprite"]
+visible = false
+position = Vector2( 1153.46, 33 )
+scale = Vector2( 0.912601, 0.919612 )
+texture = ExtResource( 17 )
+
+[node name="labelPoder" type="TextEdit" parent="hud"]
+visible = false
+margin_left = 199.446
+margin_top = 246.612
+margin_right = 303.446
+margin_bottom = 284.612
+text = "Tem poder:"
+readonly = true
+
+[node name="poder" type="TextEdit" parent="hud"]
+visible = false
+margin_left = 312.261
+margin_top = 246.621
+margin_right = 352.261
+margin_bottom = 286.621
+readonly = true
+
+[node name="result" type="TextEdit" parent="hud"]
+visible = false
+margin_left = 626.563
+margin_top = 368.848
+margin_right = 801.563
+margin_bottom = 472.848
+readonly = true
+
+[node name="Derrota" type="Sprite" parent="."]
+visible = false
+position = Vector2( 677.535, 377.246 )
+scale = Vector2( 0.174029, 0.177226 )
+texture = ExtResource( 18 )
+
+[node name="reiniciar" type="Button" parent="Derrota"]
+show_behind_parent = true
+margin_left = -1335.0
+margin_top = 592.96
+margin_right = -1323.0
+margin_bottom = 612.96
+rect_scale = Vector2( 212.526, 35.3659 )
+
+[node name="Vitoria" type="Sprite" parent="."]
+visible = false
+position = Vector2( 680.694, 382.575 )
+scale = Vector2( 0.174819, 0.171413 )
+texture = ExtResource( 19 )
+
+[node name="reiniciar2" type="Button" parent="Vitoria"]
+show_behind_parent = true
+margin_left = -967.269
+margin_top = 247.879
+margin_right = -955.269
+margin_bottom = 267.879
+rect_scale = Vector2( 157.326, 52.2876 )
+[connection signal="pressed" from="Derrota/reiniciar" to="hud" method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="Vitoria/reiniciar2" to="hud" method="_on_reiniciar2_pressed"]

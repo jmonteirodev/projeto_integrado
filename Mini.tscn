@@ -1,0 +1,110 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Mini.gd" type="Script" id=1]
+[ext_resource path="res://mini/andar0001.png" type="Texture" id=2]
+[ext_resource path="res://mini/andar0002.png" type="Texture" id=3]
+[ext_resource path="res://mini/andar0003.png" type="Texture" id=4]
+[ext_resource path="res://mini/andar0004.png" type="Texture" id=5]
+[ext_resource path="res://mini/andar0005.png" type="Texture" id=6]
+[ext_resource path="res://mini/andar0006.png" type="Texture" id=7]
+[ext_resource path="res://mini/andar0007.png" type="Texture" id=8]
+[ext_resource path="res://mini/andar0008.png" type="Texture" id=9]
+[ext_resource path="res://mini/andar0009.png" type="Texture" id=10]
+[ext_resource path="res://mini/andar0010.png" type="Texture" id=11]
+[ext_resource path="res://mini/andar0011.png" type="Texture" id=12]
+[ext_resource path="res://mini/andar0012.png" type="Texture" id=13]
+[ext_resource path="res://mini/andar0013.png" type="Texture" id=14]
+[ext_resource path="res://mini/andar0014.png" type="Texture" id=15]
+[ext_resource path="res://mini/andar0015.png" type="Texture" id=16]
+[ext_resource path="res://mini/andar0016.png" type="Texture" id=17]
+[ext_resource path="res://mini/andar0017.png" type="Texture" id=18]
+[ext_resource path="res://mini/andar0018.png" type="Texture" id=19]
+[ext_resource path="res://mini/andar0019.png" type="Texture" id=20]
+[ext_resource path="res://mini/Morte0001.png" type="Texture" id=21]
+[ext_resource path="res://mini/Morte0002.png" type="Texture" id=22]
+[ext_resource path="res://mini/Morte0003.png" type="Texture" id=23]
+[ext_resource path="res://mini/Morte0004.png" type="Texture" id=24]
+[ext_resource path="res://mini/Morte0005.png" type="Texture" id=25]
+[ext_resource path="res://mini/Morte0006.png" type="Texture" id=26]
+[ext_resource path="res://mini/Morte0007.png" type="Texture" id=27]
+[ext_resource path="res://mini/Morte0008.png" type="Texture" id=28]
+[ext_resource path="res://mini/Morte0009.png" type="Texture" id=29]
+[ext_resource path="res://mini/Morte0010.png" type="Texture" id=30]
+[ext_resource path="res://mini/Morte0011.png" type="Texture" id=31]
+[ext_resource path="res://mini/Morte0012.png" type="Texture" id=32]
+[ext_resource path="res://mini/Morte0013.png" type="Texture" id=33]
+[ext_resource path="res://mini/Morte0014.png" type="Texture" id=34]
+[ext_resource path="res://mini/Morte0015.png" type="Texture" id=35]
+[ext_resource path="res://mini/Morte0016.png" type="Texture" id=36]
+[ext_resource path="res://mini/atacar0001.png" type="Texture" id=37]
+[ext_resource path="res://mini/atacar0002.png" type="Texture" id=38]
+[ext_resource path="res://mini/atacar0003.png" type="Texture" id=39]
+[ext_resource path="res://mini/atacar0004.png" type="Texture" id=40]
+[ext_resource path="res://mini/atacar0005.png" type="Texture" id=41]
+[ext_resource path="res://mini/atacar0006.png" type="Texture" id=42]
+[ext_resource path="res://mini/atacar0007.png" type="Texture" id=43]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Andar",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": false,
+"name": "Morte",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "Ataque",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29.9771, 79.019 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 34.1571, 74.6697 )
+
+[node name="Mini" type="KinematicBody2D"]
+z_index = 4
+collision_layer = 5
+collision_mask = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 53.0482, 9.35979 )
+scale = Vector2( 0.721333, 0.721333 )
+frames = SubResource( 1 )
+animation = "Andar"
+frame = 11
+playing = true
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.0229, 31.8898 )
+shape = SubResource( 2 )
+
+[node name="Frente" type="RayCast2D" parent="."]
+position = Vector2( -0.338688, 26.4895 )
+enabled = true
+cast_to = Vector2( 100, 0 )
+
+[node name="Baixo" type="RayCast2D" parent="."]
+position = Vector2( 72.1731, -31.947 )
+enabled = true
+cast_to = Vector2( 0, 150 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 53, 0.333328 )
+
+[node name="areaDano" type="Area2D" parent="."]
+
+[node name="dano" type="CollisionShape2D" parent="areaDano"]
+position = Vector2( 0.752244, 23.2523 )
+shape = SubResource( 3 )
